@@ -34,7 +34,7 @@ using namespace Qt::Literals::StringLiterals;
 
 // used only for settings serialization, do not translate
 static const QStringList suggestionModeNames { "LocalDocsOnly", "On", "Off" };
-static const QStringList chatThemeNames      { "Light", "Dark", "LegacyDark" };
+static const QStringList chatThemeNames      { "Light", "Dark", "LegacyDark", "Futuristic" };
 static const QStringList fontSizeNames       { "Small", "Medium", "Large" };
 
 // psuedo-enum
