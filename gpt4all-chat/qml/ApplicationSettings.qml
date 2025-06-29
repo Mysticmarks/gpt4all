@@ -112,6 +112,7 @@ MySettingsTab {
                 ListElement { name: qsTr("Light") }
                 ListElement { name: qsTr("Dark") }
                 ListElement { name: qsTr("LegacyDark") }
+                ListElement { name: qsTr("Futuristic") }
             }
             Accessible.name: themeLabel.text
             Accessible.description: themeLabel.helpText

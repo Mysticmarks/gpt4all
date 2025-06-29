@@ -122,12 +122,21 @@ QtObject {
     property color blue950: "#1c1f21"
     property color blue1000: "#0e1011"
 
+    // Futuristic Theme Colors
+    property color voidBlack: Qt.hsla(0, 0, 0.05)
+    property color futuristicBlue: Qt.hsla(190/360, 0.8, 0.5)     // A vibrant teal
+    property color futuristicAccent: Qt.hsla(200/360, 0.9, 0.6)  // A brighter, slightly lighter blue
+    property color futuristicText: Qt.hsla(190/360, 0.7, 0.8)      // A light teal for text
+    property color futuristicMutedText: Qt.hsla(190/360, 0.5, 0.6) // A less saturated/darker teal for muted text
+
     property color accentColor: {
         switch (MySettings.chatTheme) {
             case MySettingsEnums.ChatTheme.LegacyDark:
                 return blue200
             case MySettingsEnums.ChatTheme.Dark:
                 return yellow300
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return yellow300
         }
@@ -143,6 +152,8 @@ QtObject {
                 return blue950
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray300
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return gray100
         }
@@ -165,6 +176,8 @@ QtObject {
                 return blue800
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray0
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return gray300
         }
@@ -187,6 +200,8 @@ QtObject {
                 return blue900
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return gray0
         }
@@ -198,6 +213,8 @@ QtObject {
                 return blue950
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack // Slightly different from voidBlack to show disabled state
             default:
                 return gray200
         }
@@ -209,6 +226,8 @@ QtObject {
                 return blue950
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return grayRed0
         }
@@ -224,6 +243,8 @@ QtObject {
                 return dividerColor
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return grayRed500
         }
@@ -235,6 +256,8 @@ QtObject {
                 return blue600
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray100
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return gray50
         }
@@ -259,6 +282,8 @@ QtObject {
                 return blue900
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return gray100
         }
@@ -270,6 +295,8 @@ QtObject {
                 return blue950
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return gray100
         }
@@ -281,6 +308,8 @@ QtObject {
                 return purple400
             case MySettingsEnums.ChatTheme.Dark:
                 return accentColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green600
         }
@@ -292,6 +321,8 @@ QtObject {
                 return blue900
             case MySettingsEnums.ChatTheme.Dark:
                 return green600
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return green100
         }
@@ -301,6 +332,8 @@ QtObject {
         switch (MySettings.chatTheme) {
             case MySettingsEnums.ChatTheme.LegacyDark:
                 return progressForeground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return "#fcf0c9"
         }
@@ -310,6 +343,8 @@ QtObject {
         switch (MySettings.chatTheme) {
             case MySettingsEnums.ChatTheme.LegacyDark:
                 return progressBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return "#fff9d2"
         }
@@ -319,6 +354,8 @@ QtObject {
         switch (MySettings.chatTheme) {
             case MySettingsEnums.ChatTheme.LegacyDark:
                 return textColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return "#d16f0e"
         }
@@ -330,6 +367,8 @@ QtObject {
                 return accentColor
             case MySettingsEnums.ChatTheme.Dark:
                 return gray200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return gray600
         }
@@ -341,6 +380,8 @@ QtObject {
                 return accentColor
             case MySettingsEnums.ChatTheme.Dark:
                 return green300
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green600
         }
@@ -352,6 +393,8 @@ QtObject {
                 return blue950
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray300
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green600
         }
@@ -363,6 +406,8 @@ QtObject {
                 return blue900
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green500
         }
@@ -374,6 +419,8 @@ QtObject {
                 return textColor
             case MySettingsEnums.ChatTheme.Dark:
                 return textColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return green600
         }
@@ -385,6 +432,8 @@ QtObject {
                 return mutedTextColor
             case MySettingsEnums.ChatTheme.Dark:
                 return mutedTextColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicMutedText
             default:
                 return green300
         }
@@ -396,6 +445,8 @@ QtObject {
                 return buttonBackground
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return green100
         }
@@ -407,6 +458,8 @@ QtObject {
                 return buttonBackgroundHovered
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBackgroundHovered
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green200
         }
@@ -418,6 +471,8 @@ QtObject {
                 return purple400
             case MySettingsEnums.ChatTheme.Dark:
                 return green400_sat
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green400_sat
         }
@@ -429,6 +484,8 @@ QtObject {
                 return purple450
             case MySettingsEnums.ChatTheme.Dark:
                 return green450_sat
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green300_sat
         }
@@ -440,6 +497,8 @@ QtObject {
                 return textColor
             case MySettingsEnums.ChatTheme.Dark:
                 return textColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return white
         }
@@ -451,6 +510,8 @@ QtObject {
                 return textColor
             case MySettingsEnums.ChatTheme.Dark:
                 return textColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return red600
         }
@@ -462,6 +523,8 @@ QtObject {
                 return mutedTextColor
             case MySettingsEnums.ChatTheme.Dark:
                 return mutedTextColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicMutedText
             default:
                 return red300
         }
@@ -473,6 +536,8 @@ QtObject {
                 return buttonBackground
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return red200
         }
@@ -484,6 +549,8 @@ QtObject {
                 return buttonBackgroundHovered
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBackgroundHovered
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return red300
         }
@@ -495,6 +562,8 @@ QtObject {
                 return textColor
             case MySettingsEnums.ChatTheme.Dark:
                 return textColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return green600
         }
@@ -506,6 +575,8 @@ QtObject {
                 return buttonBackground
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return green100
         }
@@ -517,6 +588,8 @@ QtObject {
                 return buttonBackgroundHovered
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBackgroundHovered
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green50
         }
@@ -528,6 +601,8 @@ QtObject {
                 return buttonBackgroundHovered
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBackgroundHovered
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent // Using accent for hover, assuming this is for a "delete" or "warning"
             default:
                 return red50
         }
@@ -539,6 +614,8 @@ QtObject {
                 return lighterButtonBackground
             case MySettingsEnums.ChatTheme.Dark:
                 return lighterButtonBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return gray100
         }
@@ -550,6 +627,8 @@ QtObject {
                 return lighterButtonBackgroundHovered
             case MySettingsEnums.ChatTheme.Dark:
                 return lighterButtonBackgroundHovered
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return gray200
         }
@@ -561,6 +640,8 @@ QtObject {
                 return accentColor
             case MySettingsEnums.ChatTheme.Dark:
                 return controlBorder
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return yellow200
         }
@@ -572,6 +653,8 @@ QtObject {
                 return accentColor
             case MySettingsEnums.ChatTheme.Dark:
                 return accentColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return black
         }
@@ -583,6 +666,8 @@ QtObject {
                 return blue0
             case MySettingsEnums.ChatTheme.Dark:
                 return darkwhite
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent // Guideline: Buttons & Interactive Elements (hover state)
             default:
                 return accentColor
         }
@@ -594,6 +679,8 @@ QtObject {
                 return blue700
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent // Guideline: Accents & Borders
             default:
                 return gray0
         }
@@ -605,6 +692,8 @@ QtObject {
                 return blue500
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray100
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return gray0
         }
@@ -615,6 +704,8 @@ QtObject {
                 return blue500
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray50
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return white
         }
@@ -626,6 +717,8 @@ QtObject {
                 return purple400
             case MySettingsEnums.ChatTheme.Dark:
                 return green400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green400
         }
@@ -637,6 +730,8 @@ QtObject {
                 return blue400
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray0
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return gray100
         }
@@ -648,6 +743,8 @@ QtObject {
                 return accentColor
             case MySettingsEnums.ChatTheme.Dark:
                 return yellow200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return yellow200
         }
@@ -659,6 +756,8 @@ QtObject {
                 return purple400
             case MySettingsEnums.ChatTheme.Dark:
                 return green400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green500
         }
@@ -670,6 +769,8 @@ QtObject {
                 return black
             case MySettingsEnums.ChatTheme.Dark:
                 return black
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return white
         }
@@ -681,6 +782,8 @@ QtObject {
                 return purple400
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green400
         }
@@ -692,6 +795,8 @@ QtObject {
                 return purple400
             case MySettingsEnums.ChatTheme.Dark:
                 return green300
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green600
         }
@@ -699,6 +804,8 @@ QtObject {
 
     property color collectionsButtonBackground: {
         switch (MySettings.chatTheme) {
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return lighterButtonBackground
         }
@@ -706,6 +813,8 @@ QtObject {
 
     property color collectionsButtonBackgroundHovered: {
         switch (MySettings.chatTheme) {
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return lighterButtonBackgroundHovered
         }
@@ -717,6 +826,8 @@ QtObject {
                 return buttonBackground
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return lighterButtonBackground
         }
@@ -728,6 +839,8 @@ QtObject {
                 return buttonBorder
             case MySettingsEnums.ChatTheme.Dark:
                 return buttonBorder
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green300
         }
@@ -739,6 +852,8 @@ QtObject {
                 return purple200
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray100
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(200/360, 1.0, 0.7)
             default:
                 return green400
         }
@@ -750,6 +865,8 @@ QtObject {
                 return textColor
             case MySettingsEnums.ChatTheme.Dark:
                 return textColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return green700
         }
@@ -761,6 +878,8 @@ QtObject {
                 return purple200
             case MySettingsEnums.ChatTheme.Dark:
                 return gray400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return green800
         }
@@ -772,6 +891,8 @@ QtObject {
                 return textColor
             case MySettingsEnums.ChatTheme.Dark:
                 return textColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return grayRed900
         }
@@ -783,6 +904,8 @@ QtObject {
                 return mutedTextColor
             case MySettingsEnums.ChatTheme.Dark:
                 return mutedTextColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return textColor
         }
@@ -794,6 +917,8 @@ QtObject {
                 return blue200
             case MySettingsEnums.ChatTheme.Dark:
                 return green400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return black
         }
@@ -805,6 +930,8 @@ QtObject {
                 return blue200
             case MySettingsEnums.ChatTheme.Dark:
                 return darkwhite
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return gray500
         }
@@ -816,6 +943,8 @@ QtObject {
                 return blue0
             case MySettingsEnums.ChatTheme.Dark:
                 return gray400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent // Guideline: Buttons & Interactive Elements (hover state)
             default:
                 return accentColor
         }
@@ -827,6 +956,8 @@ QtObject {
                 return iconBackgroundLight
             case MySettingsEnums.ChatTheme.Dark:
                 return iconBackgroundLight
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green500
         }
@@ -838,6 +969,8 @@ QtObject {
                 return iconBackgroundLight
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray50
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green200
         }
@@ -849,6 +982,8 @@ QtObject {
                 return iconBackgroundHovered
             case MySettingsEnums.ChatTheme.Dark:
                 return iconBackgroundHovered
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green600
         }
@@ -860,6 +995,8 @@ QtObject {
                 return blue600
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray300
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return gray100
         }
@@ -871,6 +1008,8 @@ QtObject {
                 return blue0
             case MySettingsEnums.ChatTheme.Dark:
                 return darkwhite
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText // Guideline: Text
             default:
                 return black
         }
@@ -879,6 +1018,8 @@ QtObject {
     // lighter contrast
     property color mutedLighterTextColor: {
         switch (MySettings.chatTheme) {
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(190/360, 0.4, 0.5)
             default:
                 return gray300
         }
@@ -887,6 +1028,8 @@ QtObject {
     // light contrast
     property color mutedLightTextColor: {
         switch (MySettings.chatTheme) {
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicMutedText
             default:
                 return gray400
         }
@@ -899,6 +1042,8 @@ QtObject {
                 return blue200
             case MySettingsEnums.ChatTheme.Dark:
                 return gray400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(190/360, 0.6, 0.7)
             default:
                 return gray500
         }
@@ -911,6 +1056,8 @@ QtObject {
                 return mutedTextColor
             case MySettingsEnums.ChatTheme.Dark:
                 return mutedTextColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return grayRed500
         }
@@ -921,6 +1068,8 @@ QtObject {
         switch (MySettings.chatTheme) {
             case MySettingsEnums.ChatTheme.LegacyDark:
                 return blue400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return grayRed900
         }
@@ -932,6 +1081,8 @@ QtObject {
                 return white
             case MySettingsEnums.ChatTheme.Dark:
                 return darkwhite
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.white
             default:
                 return white
         }
@@ -943,6 +1094,8 @@ QtObject {
                 return white
             case MySettingsEnums.ChatTheme.Dark:
                 return darkwhite
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(0, 0, 0.8)
             default:
                 return white
         }
@@ -954,6 +1107,8 @@ QtObject {
                 return accentColor
             case MySettingsEnums.ChatTheme.Dark:
                 return accentColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return accentColor
         }
@@ -968,6 +1123,8 @@ QtObject {
                 return blue100
             case MySettingsEnums.ChatTheme.Dark:
                 return green200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return black
         }
@@ -979,6 +1136,8 @@ QtObject {
                 return purple400
             case MySettingsEnums.ChatTheme.Dark:
                 return green300
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green700
         }
@@ -990,6 +1149,8 @@ QtObject {
                 return darkwhite
             case MySettingsEnums.ChatTheme.Dark:
                 return green200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green700
         }
@@ -1001,6 +1162,8 @@ QtObject {
                 return blue200
             case MySettingsEnums.ChatTheme.Dark:
                 return gray400
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicMutedText
             default:
                 return gray600
         }
@@ -1012,6 +1175,8 @@ QtObject {
                 return purple100
             case MySettingsEnums.ChatTheme.Dark:
                 return yellow25
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return grayRed900
         }
@@ -1023,6 +1188,8 @@ QtObject {
                 return purple50
             case MySettingsEnums.ChatTheme.Dark:
                 return yellow0
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(190/360, 0.8, 0.9)
             default:
                 return grayRed400
         }
@@ -1034,6 +1201,8 @@ QtObject {
                 return blue0
             case MySettingsEnums.ChatTheme.Dark:
                 return yellow50
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return green500
         }
@@ -1045,6 +1214,8 @@ QtObject {
                 return purple50
             case MySettingsEnums.ChatTheme.Dark:
                 return yellow0
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return grayRed800
         }
@@ -1056,6 +1227,8 @@ QtObject {
                 return accentColor
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray0
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return darkgray0
         }
@@ -1067,6 +1240,8 @@ QtObject {
                 return yellow600
             case MySettingsEnums.ChatTheme.Dark:
                 return yellow600
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return yellow600
         }
@@ -1078,6 +1253,8 @@ QtObject {
                 return blue900
             case MySettingsEnums.ChatTheme.Dark:
                 return green600
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return green600
         }
@@ -1085,6 +1262,8 @@ QtObject {
 
     property color mainComboBackground: {
         switch (MySettings.chatTheme) {
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return "transparent"
         }
@@ -1096,6 +1275,8 @@ QtObject {
                 return blue1000
             case MySettingsEnums.ChatTheme.Dark:
                 return green950
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(200/360, 0.9, 0.6, 0.5)
             default:
                 return green300
         }
@@ -1107,6 +1288,8 @@ QtObject {
                 return blue800
             case MySettingsEnums.ChatTheme.Dark:
                 return green700
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green700
         }
@@ -1118,6 +1301,8 @@ QtObject {
                 return purple400
             case MySettingsEnums.ChatTheme.Dark:
                 return accentColor
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return accentColor
         }
@@ -1127,6 +1312,8 @@ QtObject {
         switch (MySettings.chatTheme) {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicText
             default:
                 return textColor
         }
@@ -1137,6 +1324,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return "#2e95d3" // blue
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return "#195273" // dark blue
         }
@@ -1147,6 +1336,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return"#f22c3d" // red
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return"#7d1721" // dark red
         }
@@ -1157,6 +1348,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return "#e9950c" // orange
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(210/360, 0.9, 0.7)
             default:
                 return "#815207" // dark orange
         }
@@ -1167,6 +1360,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return "#808080" // gray
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(180/360, 0.4, 0.5)
             default:
                 return "#474747" // dark gray
         }
@@ -1177,6 +1372,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return "#00a37d" // green
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(170/360, 0.7, 0.7)
             default:
                 return "#004a39" // dark green
         }
@@ -1187,6 +1384,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return "#df3079" // fuchsia
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(220/360, 0.8, 0.7)
             default:
                 return "#761942" // dark fuchsia
         }
@@ -1197,6 +1396,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return containerBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return green50
         }
@@ -1207,6 +1408,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return controlBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(0,0,0.1)
             default:
                 return gray100
         }
@@ -1217,6 +1420,8 @@ QtObject {
             case MySettingsEnums.ChatTheme.LegacyDark:
             case MySettingsEnums.ChatTheme.Dark:
                 return controlBackground
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return Qt.hsla(0,0,0.1)
             default:
                 return gray100
         }
@@ -1228,6 +1433,8 @@ QtObject {
                 return blue700
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray200
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.voidBlack
             default:
                 return gray50
         }
@@ -1239,6 +1446,8 @@ QtObject {
                 return blue400
             case MySettingsEnums.ChatTheme.Dark:
                 return darkgray0
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicAccent
             default:
                 return green100
         }
@@ -1250,6 +1459,8 @@ QtObject {
                 return blue400
             case MySettingsEnums.ChatTheme.Dark:
                 return gray800
+            case MySettingsEnums.ChatTheme.Futuristic:
+                return theme.futuristicBlue
             default:
                 return gray300
         }

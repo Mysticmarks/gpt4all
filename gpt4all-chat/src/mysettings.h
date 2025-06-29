@@ -39,6 +39,7 @@ namespace MySettingsEnums {
         Light      = 0,
         Dark       = 1,
         LegacyDark = 2,
+        Futuristic = 3, // New theme
     };
     Q_ENUM_NS(ChatTheme)
 
